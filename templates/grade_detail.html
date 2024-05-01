@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block title %} Grade Details: {{ student.studentID}} {% endblock %}
+{% block content %}
+    <h2>Student ID: {{ student.studentID}}</h2>
+    <p>Grade Score: {{ student.Grade}}</p>
+    <p>Grade Letter: {{ student.letter}}</p>
+    <br/>
+    <a href="{{ url_for('students')}}" target="_blank"> Back to grades page </a>
+{% endblock %}

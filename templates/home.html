@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2>Students Grades</h2>
+    <p>The following grades are retrived from database:</p>
+    <ul>
+    {% for dt in data %}
+      <li><a href="{{ url_for('grade_detail', id=dt._id)}}"> {{ dt.studentID }} </a></li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
